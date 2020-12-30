@@ -13,15 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Connection ~ 3500 2050
-Wire Wire Line
-	3500 2050 3500 3100
-Wire Wire Line
-	3350 2350 3900 2350
-Wire Wire Line
-	3600 2050 3500 2050
-Wire Wire Line
-	3500 2000 3500 2050
 Wire Wire Line
 	5200 4450 4750 4450
 Connection ~ 5200 4450
@@ -241,8 +232,6 @@ Wire Wire Line
 	4650 3850 4700 3850
 Wire Wire Line
 	4650 4400 4650 3850
-Wire Wire Line
-	6050 4400 4650 4400
 $Comp
 L Device:R_US R5
 U 1 1 6002BAD2
@@ -256,8 +245,6 @@ F 3 "~" H 6200 4400 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4900 4500 4900 4700
-Wire Wire Line
-	4700 4800 4700 3950
 Text Notes 4700 2850 2    50   ~ 0
 T DATA
 Text GLabel 6000 3150 2    50   Output ~ 0
@@ -309,17 +296,7 @@ F 3 "" H 5100 4550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4350 2700 4350 2050
-Connection ~ 3350 2700
-Wire Wire Line
-	3350 3400 3900 3400
-Wire Wire Line
-	3350 2700 3350 3400
-Wire Wire Line
 	3350 2700 3750 2700
-Wire Wire Line
-	3350 2350 3350 2700
-Connection ~ 4350 2050
 Connection ~ 4350 2700
 Wire Wire Line
 	4350 2700 4050 2700
@@ -349,21 +326,6 @@ F 3 "~" H 3900 2700 50  0001 C CNN
 	1    3900 2700
 	0    -1   -1   0   
 $EndComp
-$Comp
-L Sensor_Temperature:DS18B20 T&R1
-U 1 1 5FE6BE6A
-P 3900 2050
-F 0 "T&R1" V 3533 2050 50  0000 C CNN
-F 1 "DS18B20" V 3624 2050 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2900 1800 50  0001 C CNN
-F 3 "http://datasheets.maximintegrated.com/en/ds/DS18B20.pdf" H 3750 2300 50  0001 C CNN
-	1    3900 2050
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4350 2050 4200 2050
-Wire Wire Line
-	4350 2050 4350 1700
 Text GLabel 4350 1700 1    50   Output ~ 0
 5V_ARDUINO
 $Comp
@@ -400,17 +362,6 @@ Wire Wire Line
 	5400 2100 5400 2250
 Text GLabel 5400 2100 1    50   Output ~ 0
 5V_ARDUINO
-$Comp
-L MCU_Module:Arduino_UNO_R3 A1
-U 1 1 5FE72A6C
-P 5200 3250
-F 0 "A1" H 5200 4431 50  0000 C CNN
-F 1 "Arduino_UNO_R3" H 5200 4340 50  0000 C CNN
-F 2 "Motor-Controller-PCB:Arduino_UNO_R3_Shield_WithMountingHoles" H 5200 3250 50  0001 C CIN
-F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 5200 3250 50  0001 C CNN
-	1    5200 3250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5550 3050 5700 3050
 Wire Wire Line
@@ -426,181 +377,6 @@ F 3 "https://www.infineon.com/dgdl/Infineon-BTN8982TA-DS-v01_00-EN.pdf?fileId=db
 	1    7150 4600
 	1    0    0    -1  
 $EndComp
-$Comp
-L Power_Management:BTN8982TA DEV.2
-U 1 1 5FEDB759
-P 2750 4600
-F 0 "DEV.2" H 2750 4019 50  0000 C CNN
-F 1 "BTN8982TA" H 2750 4110 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:TO-263-7_TabPin8" H 2550 5050 50  0001 C CNN
-F 3 "https://www.infineon.com/dgdl/Infineon-BTN8982TA-DS-v01_00-EN.pdf?fileId=db3a30433fa9412f013fbe32289b7c17" H 2700 4610 50  0001 C CNN
-	1    2750 4600
-	-1   0    0    1   
-$EndComp
-$Comp
-L pspice:C C3
-U 1 1 5FF1F8BD
-P 2650 5300
-F 0 "C3" H 2472 5254 50  0000 R CNN
-F 1 "100n" H 2472 5345 50  0000 R CNN
-F 2 "" H 2650 5300 50  0001 C CNN
-F 3 "~" H 2650 5300 50  0001 C CNN
-	1    2650 5300
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GNDREF #PWR03
-U 1 1 5FF1FFA2
-P 2700 5550
-F 0 "#PWR03" H 2700 5300 50  0001 C CNN
-F 1 "GNDREF" V 2705 5422 50  0000 R CNN
-F 2 "" H 2700 5550 50  0001 C CNN
-F 3 "" H 2700 5550 50  0001 C CNN
-	1    2700 5550
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R_US R6
-U 1 1 5FF2432D
-P 3150 3450
-F 0 "R6" V 3355 3450 50  0000 C CNN
-F 1 "470" V 3264 3450 50  0000 C CNN
-F 2 "" V 3190 3440 50  0001 C CNN
-F 3 "~" H 3150 3450 50  0001 C CNN
-	1    3150 3450
-	0    -1   -1   0   
-$EndComp
-$Comp
-L pspice:C C12
-U 1 1 5FF258EE
-P 3150 3850
-F 0 "C12" V 2835 3850 50  0000 C CNN
-F 1 "100n" V 2926 3850 50  0000 C CNN
-F 2 "" H 3150 3850 50  0001 C CNN
-F 3 "~" H 3150 3850 50  0001 C CNN
-	1    3150 3850
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3400 3450 3300 3450
-Wire Wire Line
-	3000 3450 2900 3450
-$Comp
-L power:GNDREF #PWR05
-U 1 1 5FF2DAC1
-P 3500 3700
-F 0 "#PWR05" H 3500 3450 50  0001 C CNN
-F 1 "GNDREF" H 3505 3527 50  0000 C CNN
-F 2 "" H 3500 3700 50  0001 C CNN
-F 3 "" H 3500 3700 50  0001 C CNN
-	1    3500 3700
-	1    0    0    -1  
-$EndComp
-Text Notes 2650 4950 3    39   ~ 0
-VBAT
-$Comp
-L power:GNDREF #PWR02
-U 1 1 5FF30416
-P 2550 4200
-F 0 "#PWR02" H 2550 3950 50  0001 C CNN
-F 1 "GNDREF" V 2555 4072 50  0000 R CNN
-F 2 "" H 2550 4200 50  0001 C CNN
-F 3 "" H 2550 4200 50  0001 C CNN
-	1    2550 4200
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2650 4200 2550 4200
-Text GLabel 1500 4050 1    39   Output ~ 0
-OUT_2
-$Comp
-L pspice:INDUCTOR L2
-U 1 1 5FF33C7A
-P 1500 4350
-F 0 "L2" V 1546 4306 50  0000 R CNN
-F 1 "100nH" V 1455 4306 50  0000 R CNN
-F 2 "" H 1500 4350 50  0001 C CNN
-F 3 "~" H 1500 4350 50  0001 C CNN
-	1    1500 4350
-	0    -1   -1   0   
-$EndComp
-$Comp
-L pspice:C C2
-U 1 1 5FF36FA3
-P 1600 4850
-F 0 "C2" H 1422 4804 50  0000 R CNN
-F 1 "220n" H 1422 4895 50  0000 R CNN
-F 2 "" H 1600 4850 50  0001 C CNN
-F 3 "~" H 1600 4850 50  0001 C CNN
-	1    1600 4850
-	-1   0    0    1   
-$EndComp
-$Comp
-L pspice:C C8
-U 1 1 5FF375EF
-P 2150 4850
-F 0 "C8" H 1972 4804 50  0000 R CNN
-F 1 "220n" H 1972 4895 50  0000 R CNN
-F 2 "" H 2150 4850 50  0001 C CNN
-F 3 "~" H 2150 4850 50  0001 C CNN
-	1    2150 4850
-	-1   0    0    1   
-$EndComp
-Text Label 2250 4600 0    39   ~ 0
-OUT2
-$Comp
-L power:GNDREF #PWR01
-U 1 1 5FF56940
-P 1600 5150
-F 0 "#PWR01" H 1600 4900 50  0001 C CNN
-F 1 "GNDREF" H 1600 4950 50  0000 C CNN
-F 2 "" H 1600 5150 50  0001 C CNN
-F 3 "" H 1600 5150 50  0001 C CNN
-	1    1600 5150
-	1    0    0    -1  
-$EndComp
-Text GLabel 2150 5150 3    39   Output ~ 0
-VBAT
-$Comp
-L power:GNDREF #PWR06
-U 1 1 5FF7A00F
-P 4100 4500
-F 0 "#PWR06" H 4100 4250 50  0001 C CNN
-F 1 "GNDREF" H 4105 4327 50  0000 C CNN
-F 2 "" H 4100 4500 50  0001 C CNN
-F 3 "" H 4100 4500 50  0001 C CNN
-	1    4100 4500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R3
-U 1 1 5FF8E000
-P 3700 4800
-F 0 "R3" V 3905 4800 50  0000 C CNN
-F 1 "10K" V 3814 4800 50  0000 C CNN
-F 2 "" V 3740 4790 50  0001 C CNN
-F 3 "~" H 3700 4800 50  0001 C CNN
-	1    3700 4800
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	3550 4800 3050 4800
-Wire Wire Line
-	1500 4050 1500 4100
-Wire Wire Line
-	1500 4600 1600 4600
-Wire Wire Line
-	1600 4600 2150 4600
-Connection ~ 1600 4600
-Wire Wire Line
-	2150 4600 2450 4600
-Connection ~ 2150 4600
-Wire Wire Line
-	2150 5100 2150 5150
-Wire Wire Line
-	1600 5100 1600 5150
-Wire Wire Line
-	4700 4800 3850 4800
 Wire Wire Line
 	4700 2950 4450 2950
 $Comp
@@ -615,10 +391,7 @@ F 3 "~" H 4450 3700 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	3050 4700 4450 4700
-Wire Wire Line
 	4450 4700 4900 4700
-Connection ~ 4450 4700
 Wire Wire Line
 	4450 3850 4450 4700
 Wire Wire Line
@@ -687,88 +460,11 @@ Wire Wire Line
 Wire Wire Line
 	5800 3250 5700 3250
 Wire Wire Line
-	3400 3450 3400 3700
-Wire Wire Line
-	3400 3700 3500 3700
-Connection ~ 3400 3700
-Wire Wire Line
-	3400 3700 3400 3850
-$Comp
-L Device:R_US R4
-U 1 1 5FFB2FFF
-P 3700 4300
-F 0 "R4" V 3905 4300 50  0000 C CNN
-F 1 "1K" V 3814 4300 50  0000 C CNN
-F 2 "" V 3740 4290 50  0001 C CNN
-F 3 "~" H 3700 4300 50  0001 C CNN
-	1    3700 4300
-	0    -1   -1   0   
-$EndComp
-$Comp
-L pspice:C C9
-U 1 1 5FF71E61
-P 3450 4500
-F 0 "C9" V 3135 4500 50  0000 C CNN
-F 1 "1n" V 3226 4500 50  0000 C CNN
-F 2 "" H 3450 4500 50  0001 C CNN
-F 3 "~" H 3450 4500 50  0001 C CNN
-	1    3450 4500
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2900 3450 2900 3650
-Wire Wire Line
-	3050 4400 3050 3900
-Wire Wire Line
-	3050 3900 2850 3900
-Wire Wire Line
-	2850 3900 2850 3650
-Wire Wire Line
-	2850 3650 2900 3650
-Connection ~ 2900 3650
-Wire Wire Line
-	2900 3650 2900 3850
-Wire Wire Line
-	3050 4500 3200 4500
-Wire Wire Line
-	3200 4500 3200 4300
-Wire Wire Line
-	3200 4300 3550 4300
-Connection ~ 3200 4500
-Wire Wire Line
-	3700 4500 3850 4500
-Wire Wire Line
-	3850 4300 3850 4500
-Connection ~ 3850 4500
-Wire Wire Line
-	3850 4500 4100 4500
-Wire Wire Line
-	3200 4300 3200 4050
-Wire Wire Line
-	3200 4050 4300 4050
-Wire Wire Line
-	4300 4050 4300 4900
-Connection ~ 3200 4300
-Wire Wire Line
 	5700 4050 5700 3950
-Wire Wire Line
-	4300 4900 5750 4900
-Wire Wire Line
-	5750 4900 5750 3350
-Wire Wire Line
-	5750 3350 5700 3350
-Wire Wire Line
-	2650 5000 2650 5050
-Wire Wire Line
-	2650 5550 2700 5550
 Text Notes 6300 4400 0    50   ~ 0
 IO 4 INH 1
-Text Notes 5100 4900 0    50   ~ 0
-A/D_2
 Text Notes 5850 4250 0    50   ~ 0
 A/D 1
-Text Notes 3850 4800 0    50   ~ 0
-IO 3 INH 2
 Text Notes 5350 4500 0    50   ~ 0
 IO 1 IN 2
 Wire Wire Line
@@ -797,4 +493,25 @@ Wire Wire Line
 Connection ~ 4350 2850
 Wire Wire Line
 	4350 2850 4350 3100
+Wire Wire Line
+	3500 2000 3500 3100
+Wire Wire Line
+	3350 2700 3350 3400
+Wire Wire Line
+	3350 3400 3900 3400
+Wire Wire Line
+	4350 1700 4350 2700
+Wire Wire Line
+	6050 4400 4650 4400
+$Comp
+L MCU_Module:Arduino_UNO_R3 A1
+U 1 1 5FE72A6C
+P 5200 3250
+F 0 "A1" H 5200 4431 50  0000 C CNN
+F 1 "Arduino_UNO_R3" H 5200 4340 50  0000 C CNN
+F 2 "Motor-Controller-PCB:Arduino_UNO_R3_Shield_WithMountingHoles" H 5200 3250 50  0001 C CIN
+F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 5200 3250 50  0001 C CNN
+	1    5200 3250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
