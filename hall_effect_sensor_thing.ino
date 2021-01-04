@@ -1,4 +1,5 @@
-const byte interruptPin = 2;
+// testing rpm without interrupts
+// const byte interruptPin = 2;
 float rev=0;
 int hit = 0;
 int rpm;
@@ -45,9 +46,15 @@ hit++;
 // attachInterrupt(digitalPinToInterrupt(interruptPin),isr,RISING);
 }
 
+/*
+tachometer arduino code problem:
+If we divide number of revolutions counted between every 0.5 sec:
+r rev/min --> (r/60) counts/sec --> (r/120) counts/ 0.5sec  but counts has to be an int
+Larger time = less error
+but we want smaller time for more accurate torque
+*/
 void rpmUpdate() {
   dT=millis()-oldtime;        
   rpm=(rev/dT)*60000;
   oldtime = millis();
 }
-
