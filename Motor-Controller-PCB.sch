@@ -376,17 +376,6 @@ $EndComp
 Wire Wire Line
 	5000 3650 5000 4050
 $Comp
-L Device:D_Zener D3
-U 1 1 5FF27EA5
-P 8550 3800
-F 0 "D3" V 8504 3880 50  0000 L CNN
-F 1 "D_Zener" V 8595 3880 50  0000 L CNN
-F 2 "" H 8550 3800 50  0001 C CNN
-F 3 "~" H 8550 3800 50  0001 C CNN
-	1    8550 3800
-	0    -1   1    0   
-$EndComp
-$Comp
 L power:GNDREF #PWR02
 U 1 1 5FF4FC93
 P 8550 4250
@@ -420,16 +409,12 @@ F 3 "~" H 8550 4100 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	8850 3650 8550 3650
-Wire Wire Line
 	9400 3650 9250 3650
-Connection ~ 8550 3650
 Wire Wire Line
 	9550 3650 9400 3650
 Connection ~ 9400 3650
 Wire Wire Line
 	9050 3950 8550 3950
-Connection ~ 8550 3950
 $Comp
 L pspice:C C12
 U 1 1 5FF4E412
@@ -496,17 +481,6 @@ $EndComp
 Wire Wire Line
 	5000 4850 5000 5300
 $Comp
-L Device:D_Zener D2
-U 1 1 5FF61098
-P 6950 3800
-F 0 "D2" V 6904 3880 50  0000 L CNN
-F 1 "D_Zener" V 6995 3880 50  0000 L CNN
-F 2 "" H 6950 3800 50  0001 C CNN
-F 3 "~" H 6950 3800 50  0001 C CNN
-	1    6950 3800
-	0    1    1    0   
-$EndComp
-$Comp
 L power:GNDREF #PWR015
 U 1 1 60110467
 P 6950 4000
@@ -540,17 +514,7 @@ F 3 "" H 7450 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6950 3650 7450 3650
-Connection ~ 6950 3650
-Wire Wire Line
 	7450 3950 7450 4000
-Wire Wire Line
-	6950 3950 6950 4000
-Wire Wire Line
-	6550 3650 6950 3650
-Wire Wire Line
-	7450 3650 8550 3650
-Connection ~ 7450 3650
 $Comp
 L power:GNDREF #PWR01
 U 1 1 60025EC3
@@ -571,11 +535,47 @@ Connection ~ 5700 4450
 Wire Wire Line
 	5700 3650 6550 3650
 Connection ~ 5700 3650
-Connection ~ 6550 3650
 Wire Wire Line
 	5000 3650 5700 3650
 Wire Wire Line
 	5200 4450 5700 4450
 Wire Wire Line
 	5700 4450 6750 4450
+Connection ~ 6550 3650
+Connection ~ 7450 3650
+Wire Wire Line
+	6550 3650 6950 3650
+Wire Wire Line
+	6950 3700 6950 3650
+Connection ~ 6950 3650
+Wire Wire Line
+	6950 3650 7450 3650
+$Comp
+L Diode:ZMDxx D3
+U 1 1 600430B4
+P 8550 3800
+F 0 "D3" V 8504 3880 50  0000 L CNN
+F 1 "BZV55-C10" V 8595 3880 50  0000 L CNN
+F 2 "Diode_SMD:D_MiniMELF" H 8550 3625 50  0001 C CNN
+F 3 "https://www.nexperia.com/products/diodes/zener-diodes/BZV55-C10.html" H 8550 3800 50  0001 C CNN
+	1    8550 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7450 3650 8550 3650
+Connection ~ 8550 3650
+Wire Wire Line
+	8550 3650 8850 3650
+Connection ~ 8550 3950
+$Comp
+L Diode:ZMYxx D2
+U 1 1 600248C7
+P 6950 3850
+F 0 "D2" V 6904 3930 50  0000 L CNN
+F 1 "ZMY39" V 6995 3930 50  0000 L CNN
+F 2 "Diode_SMD:D_MELF" H 6950 3675 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/85790/zpy3v9.pdf" H 6950 3850 50  0001 C CNN
+	1    6950 3850
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
