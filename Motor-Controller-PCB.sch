@@ -467,17 +467,6 @@ F 3 "~" H 6550 3900 50  0001 C CNN
 	1    6550 3900
 	1    0    0    -1  
 $EndComp
-$Comp
-L Transistor_FET:AO3401A Q1
-U 1 1 5FF2BD42
-P 9050 3750
-F 0 "Q1" V 9392 3750 50  0000 C CNN
-F 1 "AO3401A" V 9301 3750 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 9250 3675 50  0001 L CIN
-F 3 "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf" H 9050 3750 50  0001 L CNN
-	1    9050 3750
-	0    1    -1   0   
-$EndComp
 Wire Wire Line
 	5000 4850 5000 5300
 $Comp
@@ -577,5 +566,16 @@ F 2 "Diode_SMD:D_MELF" H 6950 3675 50  0001 C CNN
 F 3 "http://www.vishay.com/docs/85790/zpy3v9.pdf" H 6950 3850 50  0001 C CNN
 	1    6950 3850
 	0    1    1    0   
+$EndComp
+$Comp
+L Motor-Controller-PCB-cache:IPD90P04P4L Q1
+U 1 1 60220AA5
+P 9050 3750
+F 0 "Q1" V 9392 3750 50  0000 C CNN
+F 1 "IPD90P04P4L" V 9301 3750 50  0000 C CNN
+F 2 "Motor-Controller-PCB:TO-252-3_TabPin2" H 9250 3675 50  0001 L CIN
+F 3 "http://www.vishay.com/docs/70209/70209.pdf" H 9050 3750 50  0001 L CNN
+	1    9050 3750
+	0    1    -1   0   
 $EndComp
 $EndSCHEMATC
