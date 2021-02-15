@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name Motor-Controller-PCB-cache)(type Legacy)(uri ${KIPRJMOD}/Motor-Controller-PCB-cache.lib)(options "")(descr ""))
+  (lib (name Motor-Controller-PCB-rescue)(type Legacy)(uri ${KIPRJMOD}/Motor-Controller-PCB-rescue.lib)(options "")(descr ""))
 )

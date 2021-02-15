@@ -318,8 +318,6 @@ Wire Wire Line
 	3550 4100 3550 3100
 Wire Wire Line
 	3550 3100 3450 3100
-Wire Wire Line
-	3450 3900 3450 3800
 Text Notes 4050 4250 0    50   ~ 0
 IO 4 INH 1
 Text Notes 3600 4100 0    50   ~ 0
@@ -421,7 +419,7 @@ U 1 1 5FF4E412
 P 9400 3900
 F 0 "C12" H 9222 3854 50  0000 R CNN
 F 1 "100uF" H 9222 3945 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 9400 3900 50  0001 C CNN
+F 2 "Capacitor_SMD:CP_Elec_10x10" H 9400 3900 50  0001 C CNN
 F 3 "~" H 9400 3900 50  0001 C CNN
 	1    9400 3900
 	1    0    0    1   
@@ -557,18 +555,7 @@ Wire Wire Line
 	8550 3650 8850 3650
 Connection ~ 8550 3950
 $Comp
-L Diode:ZMYxx D2
-U 1 1 600248C7
-P 6950 3850
-F 0 "D2" V 6904 3930 50  0000 L CNN
-F 1 "ZMY39" V 6995 3930 50  0000 L CNN
-F 2 "Diode_SMD:D_MELF" H 6950 3675 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/85790/zpy3v9.pdf" H 6950 3850 50  0001 C CNN
-	1    6950 3850
-	0    1    1    0   
-$EndComp
-$Comp
-L Motor-Controller-PCB-cache:IPD90P04P4L Q1
+L Motor-Controller-PCB-rescue:IPD90P04P4L-Motor-Controller-PCB-cache Q1
 U 1 1 60220AA5
 P 9050 3750
 F 0 "Q1" V 9392 3750 50  0000 C CNN
@@ -577,5 +564,16 @@ F 2 "Motor-Controller-PCB:TO-252-3_TabPin2" H 9250 3675 50  0001 L CIN
 F 3 "http://www.vishay.com/docs/70209/70209.pdf" H 9050 3750 50  0001 L CNN
 	1    9050 3750
 	0    1    -1   0   
+$EndComp
+$Comp
+L Diode:1N47xxA D2
+U 1 1 602A1D3C
+P 6950 3850
+F 0 "D2" V 6904 3930 50  0000 L CNN
+F 1 "1N4754A" V 6995 3930 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 6950 3675 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85816/1n4728a.pdf" H 6950 3850 50  0001 C CNN
+	1    6950 3850
+	0    1    1    0   
 $EndComp
 $EndSCHEMATC
