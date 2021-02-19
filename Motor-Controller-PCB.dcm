@@ -1,0 +1,15 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP IPD90P04P4L
+D -90A Id, -40V Vds, P-Channel MOSFET, TO-252
+K P-Channel MOSFET
+F https://www.infineon.com/dgdl/Infineon-IPD90P04P4L-04-DataSheet-v01_02-EN.pdf?fileId=db3a30432f69f146012f7829059b2dee
+$ENDCMP
+#
+$CMP TJ200F04M3L
+D -200A Id, -40V Vds, P-Channel MOSFET, TO-220SM
+K P-Channel MOSFET
+F https://toshiba.semicon-storage.com/info/docget.jsp?did=29739&prodName=TJ200F04M3L
+$ENDCMP
+#
+#End Doc Library
