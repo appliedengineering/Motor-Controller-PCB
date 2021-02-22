@@ -42,10 +42,10 @@ F 3 "~" H 1800 3250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R2
 U 1 1 603A029F
 P 4550 4500
-F 0 "R?" V 4343 4500 50  0000 C CNN
+F 0 "R2" V 4343 4500 50  0000 C CNN
 F 1 "20k" V 4434 4500 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4480 4500 50  0001 C CNN
 F 3 "~" H 4550 4500 50  0001 C CNN
@@ -53,10 +53,10 @@ F 3 "~" H 4550 4500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C1
 U 1 1 603AA303
 P 4300 4950
-F 0 "C?" H 4415 4996 50  0000 L CNN
+F 0 "C1" H 4415 4996 50  0000 L CNN
 F 1 "10nF" H 4415 4905 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4338 4800 50  0001 C CNN
 F 3 "~" H 4300 4950 50  0001 C CNN
@@ -75,10 +75,10 @@ F 3 "~" H 1600 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Sensor_Temperature:DS18B20-PAR U?
+L Sensor_Temperature:DS18B20-PAR U1
 U 1 1 603F00AB
 P 1100 3500
-F 0 "U?" H 1157 3867 50  0000 C CNN
+F 0 "U1" H 1157 3867 50  0000 C CNN
 F 1 "DS18B20-PAR" H 1157 3776 50  0000 C CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 100 3250 50  0001 C CNN
 F 3 "http://datasheets.maximintegrated.com/en/ds/DS18B20-PAR.pdf" H 950 3750 50  0001 C CNN
@@ -259,21 +259,21 @@ F 3 "~" H 10100 4750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R3
 U 1 1 602EFD1A
 P 7500 3200
-F 0 "R?" V 7293 3200 50  0000 C CNN
+F 0 "R3" V 7293 3200 50  0000 C CNN
 F 1 "100" V 7384 3200 50  0000 C CNN
-F 2 "" V 7430 3200 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7430 3200 50  0001 C CNN
 F 3 "~" H 7500 3200 50  0001 C CNN
 	1    7500 3200
 	0    1    1    0   
 $EndComp
 $Comp
-L Motor-Controller-PCB:TJ200F04M3L Q?
+L Motor-Controller-PCB:TJ200F04M3L Q2
 U 1 1 602D2841
 P 7500 3700
-F 0 "Q?" V 7842 3700 50  0000 C CNN
+F 0 "Q2" V 7842 3700 50  0000 C CNN
 F 1 "TJ200F04M3L" V 7751 3700 50  0000 C CNN
 F 2 "Motor-Controller-PCB:TO-220SM-3_TabPin2_ThermalVias" H 7700 3625 50  0001 L CIN
 F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=29739&prodName=TJ200F04M3L" H 7500 3700 50  0001 L CNN
@@ -325,10 +325,10 @@ Wire Wire Line
 Wire Wire Line
 	10300 3600 10500 3600
 $Comp
-L Motor-Controller-PCB:TJ200F04M3L Q?
+L Motor-Controller-PCB:TJ200F04M3L Q3
 U 1 1 602CFF4E
 P 10100 3700
-F 0 "Q?" V 10442 3700 50  0000 C CNN
+F 0 "Q3" V 10442 3700 50  0000 C CNN
 F 1 "TJ200F04M3L" V 10351 3700 50  0000 C CNN
 F 2 "Motor-Controller-PCB:TO-220SM-3_TabPin2_ThermalVias" H 10300 3625 50  0001 L CIN
 F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=29739&prodName=TJ200F04M3L" H 10100 3700 50  0001 L CNN
@@ -423,21 +423,21 @@ Wire Wire Line
 Wire Wire Line
 	8300 4900 8300 5200
 $Comp
-L Device:R R?
+L Device:R R4
 U 1 1 6040EA0D
 P 8300 4750
-F 0 "R?" H 8370 4796 50  0000 L CNN
+F 0 "R4" H 8370 4796 50  0000 L CNN
 F 1 "10M" H 8370 4705 50  0000 L CNN
-F 2 "" V 8230 4750 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8230 4750 50  0001 C CNN
 F 3 "~" H 8300 4750 50  0001 C CNN
 	1    8300 4750
 	1    0    0    -1  
 $EndComp
 $Comp
-L Diode:ZMDxx D?
+L Diode:ZMDxx D1
 U 1 1 604A3745
 P 8300 3950
-F 0 "D?" V 8254 4030 50  0000 L CNN
+F 0 "D1" V 8254 4030 50  0000 L CNN
 F 1 "10V" V 8345 4030 50  0000 L CNN
 F 2 "Diode_SMD:D_MiniMELF" H 8300 3775 50  0001 C CNN
 F 3 "https://www.nexperia.com/products/diodes/zener-diodes/BZV55-C10.html" H 8300 3950 50  0001 C CNN
@@ -474,13 +474,16 @@ Connection ~ 6700 5200
 Wire Wire Line
 	6700 4100 6700 5200
 $Comp
-L Device:C C?
+L Device:C C2
 U 1 1 60375F62
 P 7900 3950
-F 0 "C?" H 7785 3904 50  0000 R CNN
+F 0 "C2" H 7785 3904 50  0000 R CNN
 F 1 "1µF" H 7785 3995 50  0000 R CNN
-F 2 "" H 7938 3800 50  0001 C CNN
-F 3 "~" H 7900 3950 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 7938 3800 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1023_X7R_AUTO_SMD-1093309.pdf" H 7900 3950 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC - SMD/SMT 25V 1uF X7R 0805 5% AEC-Q200" H 7900 3950 50  0001 C CNN "Description"
+F 5 "C0805C105J3RACAUTO" H 7900 3950 50  0001 C CNN "Part"
+F 6 "KEMET" H 7900 3950 50  0001 C CNN "Vendor"
 	1    7900 3950
 	-1   0    0    1   
 $EndComp
